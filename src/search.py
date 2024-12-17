@@ -1,8 +1,10 @@
 import numpy as np
 import json
+import openai
 import torch
 from scipy.spatial.distance import cdist
 from sentence_transformers import SentenceTransformer
+from transformers import AutoTokenizer, AutoModel
 
 class BaseSemanticSearch:
     def __init__(self, data_file):
@@ -50,6 +52,7 @@ class BaseSemanticSearch:
 class SentenceTransformerSearch(BaseSemanticSearch):
     def __init__(self, data_file, model_name='all-MiniLM-L6-v2'):
         super().__init__(data_file)
+        self.model_name = model_name
         self.model = SentenceTransformer(model_name)
         self.embeddings = self._generate_embeddings()
 
@@ -65,7 +68,7 @@ class SentenceTransformerSearch(BaseSemanticSearch):
 class BERTSearch(BaseSemanticSearch):
     def __init__(self, data_file, model_name='bert-base-uncased'):
         super().__init__(data_file)
-        from transformers import AutoTokenizer, AutoModel
+        self.model_name = model_name
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
         self.model = AutoModel.from_pretrained(model_name)
         self.embeddings = self._generate_embeddings()
@@ -93,7 +96,91 @@ class BERTSearch(BaseSemanticSearch):
             embeddings.append(cls_embedding)
         return np.array(embeddings)
 
-import json
+class RoBERTaSearch(BaseSemanticSearch):
+    def __init__(self, data_file, model_name='roberta-base'):
+        super().__init__(data_file)
+        self.model_name = model_name
+        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+        self.model = AutoModel.from_pretrained(model_name)
+        self.embeddings = self._generate_embeddings()
+
+    def _generate_embeddings(self):
+        descriptions = [item['description'] for item in self.data]
+        embeddings = []
+        for text in descriptions:
+            inputs = self.tokenizer(text, return_tensors='pt', truncation=True, padding=True, max_length=512)
+            with torch.no_grad():
+                outputs = self.model(**inputs)
+            cls_embedding = outputs.last_hidden_state[:, 0, :].squeeze(0).numpy()
+            embeddings.append(cls_embedding)
+        return np.array(embeddings)
+    
+    def _generate_query_embeddings(self, queries):
+        embeddings = []
+        for text in queries:
+            inputs = self.tokenizer(text, return_tensors='pt', truncation=True, padding=True, max_length=512)
+            with torch.no_grad():
+                outputs = self.model(**inputs)
+            cls_embedding = outputs.last_hidden_state[:, 0, :].squeeze(0).numpy()
+            embeddings.append(cls_embedding)
+        return np.array(embeddings)
+
+
+class AdvancedSentenceTransformerSearch(BaseSemanticSearch):
+    def __init__(self, data_file, model_name='all-MiniLM-L6-v2'):
+        super().__init__(data_file)
+        self.model_name = model_name  # Store the model name for later use
+        self.model = SentenceTransformer(model_name)
+        self.embeddings = self._generate_embeddings()
+
+    def _generate_embeddings(self):
+        """Generate embeddings for all descriptions using SentenceTransformer."""
+        descriptions = [item['description'] for item in self.data]
+        return self.model.encode(descriptions)
+
+    def _generate_query_embeddings(self, queries):
+        """Generate embeddings for queries using SentenceTransformer."""
+        return self.model.encode(queries)
+
+
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+class TFIDFSearch(BaseSemanticSearch):
+    def __init__(self, data_file):
+        super().__init__(data_file)
+        self.model_name = 'TFIDF'
+        self.vectorizer = TfidfVectorizer()
+        self.embeddings = self._generate_embeddings()
+
+    def _generate_embeddings(self):
+        descriptions = [item['description'] for item in self.data]
+        return self.vectorizer.fit_transform(descriptions).toarray()
+
+    def _generate_query_embeddings(self, queries):
+        return self.vectorizer.transform(queries).toarray()
+
+class OpenAISearch(BaseSemanticSearch):
+    def __init__(self, data_file, api_key, model_name="text-embedding-ada-002"):
+        super().__init__(data_file)
+        openai.api_key = api_key
+        self.model_name = model_name
+        self.model = model_name
+        self.embeddings = self._generate_embeddings()
+
+    def _generate_embeddings(self):
+        descriptions = [item['description'] for item in self.data]
+        embeddings = []
+        for desc in descriptions:
+            response = openai.Embedding.create(input=desc, model=self.model_name)
+            embeddings.append(response['data'][0]['embedding'])
+        return np.array(embeddings)
+
+    def _generate_query_embeddings(self, queries):
+        return np.array([
+            openai.Embedding.create(input=query, model=self.model_name)['data'][0]['embedding']
+            for query in queries
+        ])
+
 
 def evaluate_model(search_engine, test_data, top_k=5):
     """
@@ -131,7 +218,7 @@ def evaluate_model(search_engine, test_data, top_k=5):
             "query": query,
             "expected": expected_material_number,
             "expected_description": expected_description,
-            "retrieved_top_5": top_matches,  # Full top 5 matches
+            "retrieved_top_5": top_matches,  
             "retrieved_material_numbers": retrieved_material_numbers,
             "similarity_scores": similarity_scores,
             "is_correct": is_correct
