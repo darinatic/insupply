@@ -1,6 +1,6 @@
 import numpy as np
 import json
-import openai
+from openai import OpenAI
 import torch
 from scipy.spatial.distance import cdist
 from sentence_transformers import SentenceTransformer
@@ -125,24 +125,6 @@ class RoBERTaSearch(BaseSemanticSearch):
             embeddings.append(cls_embedding)
         return np.array(embeddings)
 
-
-class AdvancedSentenceTransformerSearch(BaseSemanticSearch):
-    def __init__(self, data_file, model_name='all-MiniLM-L6-v2'):
-        super().__init__(data_file)
-        self.model_name = model_name  # Store the model name for later use
-        self.model = SentenceTransformer(model_name)
-        self.embeddings = self._generate_embeddings()
-
-    def _generate_embeddings(self):
-        """Generate embeddings for all descriptions using SentenceTransformer."""
-        descriptions = [item['description'] for item in self.data]
-        return self.model.encode(descriptions)
-
-    def _generate_query_embeddings(self, queries):
-        """Generate embeddings for queries using SentenceTransformer."""
-        return self.model.encode(queries)
-
-
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 class TFIDFSearch(BaseSemanticSearch):
@@ -162,25 +144,20 @@ class TFIDFSearch(BaseSemanticSearch):
 class OpenAISearch(BaseSemanticSearch):
     def __init__(self, data_file, api_key, model_name="text-embedding-ada-002"):
         super().__init__(data_file)
-        openai.api_key = api_key
+        self.client = OpenAI(api_key=api_key)
         self.model_name = model_name
-        self.model = model_name
         self.embeddings = self._generate_embeddings()
 
     def _generate_embeddings(self):
         descriptions = [item['description'] for item in self.data]
-        embeddings = []
-        for desc in descriptions:
-            response = openai.Embedding.create(input=desc, model=self.model_name)
-            embeddings.append(response['data'][0]['embedding'])
+        response = self.client.embeddings.create(input=descriptions, model=self.model_name)
+        embeddings = [data['embedding'] for data in response['data']]
         return np.array(embeddings)
 
     def _generate_query_embeddings(self, queries):
-        return np.array([
-            openai.Embedding.create(input=query, model=self.model_name)['data'][0]['embedding']
-            for query in queries
-        ])
-
+        response = self.client.embeddings.create(input=queries, model=self.model_name)
+        query_embeddings = [data['embedding'] for data in response['data']]
+        return np.array(query_embeddings)
 
 def evaluate_model(search_engine, test_data, top_k=5):
     """
