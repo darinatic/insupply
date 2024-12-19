@@ -1,298 +1,498 @@
 [
     {
-        "material_number": "E001",
+        "material_number": "212101",
         "description": "Rental-Building"
     },
     {
-        "material_number": "E003",
+        "material_number": "212201",
+        "description": "Rental-Land"
+    },
+    {
+        "material_number": "212301",
         "description": "Rental-Office Equipment"
     },
     {
-        "material_number": "E004",
+        "material_number": "212401",
         "description": "Rental-Other Equipment"
     },
     {
-        "material_number": "E005",
+        "material_number": "212501",
         "description": "Rental-ICT Hardware"
     },
     {
-        "material_number": "E006",
+        "material_number": "212601",
         "description": "Rental-ICT Hardware Integrated with Software"
     },
     {
-        "material_number": "E007",
+        "material_number": "212901",
         "description": "Rental-Other Assets"
     },
     {
-        "material_number": "E008",
+        "material_number": "213101",
         "description": "Service for Office Supplies(OOE only)"
     },
     {
-        "material_number": "E009",
+        "material_number": "213201",
         "description": "Service for Meals & Refreshments(OOE only)"
     },
     {
-        "material_number": "E011",
+        "material_number": "213301",
+        "description": "Service for Publication Materials(OOE only)"
+    },
+    {
+        "material_number": "213401",
         "description": "Service for Uniform Supplies(OOE only)"
     },
     {
-        "material_number": "E016",
+        "material_number": "213501",
+        "description": "Service for Safety & Medical Supplies(OOE only)"
+    },
+    {
+        "material_number": "213901",
+        "description": "Service for School Supplies(OOE only)"
+    },
+    {
+        "material_number": "213902",
+        "description": "Service for Industrial Supplies(OOE only)"
+    },
+    {
+        "material_number": "213903",
+        "description": "Service for Ammunitions & Targets(OOE only)"
+    },
+    {
+        "material_number": "213904",
         "description": "Service for Other Supplies(OOE only)"
     },
     {
-        "material_number": "E017",
+        "material_number": "214101",
         "description": "Utilities-Telecommunications"
     },
     {
-        "material_number": "E018",
+        "material_number": "214201",
         "description": "Utilities-Public Utilities"
     },
     {
-        "material_number": "E020",
+        "material_number": "214202",
+        "description": "Utilities-Other Utilities"
+    },
+    {
+        "material_number": "215101",
         "description": "Travel & Transport-Overseas"
     },
     {
-        "material_number": "E021",
+        "material_number": "215201",
         "description": "Travel & Transport-Local(OOE only)"
     },
     {
-        "material_number": "E022",
+        "material_number": "216101",
         "description": "Professional Services-Consultancy Services"
     },
     {
-        "material_number": "E023",
+        "material_number": "216201",
         "description": "Professional Services-Legal Services"
     },
     {
-        "material_number": "E024",
+        "material_number": "216301",
         "description": "Professional Services-Financial Services"
     },
     {
-        "material_number": "E025",
+        "material_number": "216401",
         "description": "Professional Services-Audit Services"
     },
     {
-        "material_number": "E026",
+        "material_number": "216501",
         "description": "Professional Services-Valuation Services"
     },
     {
-        "material_number": "E027",
+        "material_number": "216601",
         "description": "Professional Services-Security Services"
     },
     {
-        "material_number": "E029",
+        "material_number": "216701",
+        "description": "Professional Services-Security Services for Buildings"
+    },
+    {
+        "material_number": "217101",
         "description": "Tech Services-Hosting Services"
     },
     {
-        "material_number": "E030",
+        "material_number": "217201",
         "description": "Tech Services-Network and Cabling Services"
     },
     {
-        "material_number": "E031",
+        "material_number": "217301",
         "description": "Tech Services-Software as a Service"
     },
     {
-        "material_number": "E032",
+        "material_number": "217401",
         "description": "Tech Services-ICT Consultancy Services"
     },
     {
-        "material_number": "E033",
+        "material_number": "217501",
         "description": "Tech Services-ICT Security/Audit Services"
     },
     {
-        "material_number": "E034",
+        "material_number": "217601",
         "description": "Tech Services-ICT Facility Management"
     },
     {
-        "material_number": "E035",
+        "material_number": "217901",
         "description": "Tech Services-Other ICT Services"
     },
     {
-        "material_number": "E036",
+        "material_number": "218101",
         "description": "Other Services-Property Management Services"
     },
     {
-        "material_number": "E039",
+        "material_number": "218201",
+        "description": "Other Services-Agency Fees & Commissions"
+    },
+    {
+        "material_number": "218301",
+        "description": "Other Services-Fees to Board Members/Directors/ Committee"
+    },
+    {
+        "material_number": "218401",
         "description": "Other Services-Postage and Courier Services"
     },
     {
-        "material_number": "E041",
+        "material_number": "218501",
+        "description": "Other Services-Public Private Partnership"
+    },
+    {
+        "material_number": "218601",
         "description": "Other Services-Licences and Royalties"
     },
     {
-        "material_number": "E043",
+        "material_number": "218901",
+        "description": "Other Services-Special Services"
+    },
+    {
+        "material_number": "218999",
         "description": "Other Services-Other Services"
     },
     {
-        "material_number": "E045",
-        "description": "Other Services-Other Services"
-    },
-    {
-        "material_number": "E047",
-        "description": "Other Services-Other Services"
-    },
-    {
-        "material_number": "E046",
-        "description": "Other Services-Other Services"
-    },
-    {
-        "material_number": "E043",
+        "material_number": "218999",
         "description": "Other Services-Manpower from Suppliers"
     },
     {
-        "material_number": "E045",
-        "description": "Other Services-Manpower from Suppliers"
-    },
-    {
-        "material_number": "E047",
-        "description": "Other Services-Manpower from Suppliers"
-    },
-    {
-        "material_number": "E046",
-        "description": "Other Services-Manpower from Suppliers"
-    },
-    {
-        "material_number": "E043",
+        "material_number": "218999",
         "description": "Other Services-Other Manpower"
     },
     {
-        "material_number": "E045",
-        "description": "Other Services-Other Manpower"
-    },
-    {
-        "material_number": "E047",
-        "description": "Other Services-Other Manpower"
-    },
-    {
-        "material_number": "E046",
-        "description": "Other Services-Other Manpower"
-    },
-    {
-        "material_number": "E043",
+        "material_number": "218999",
         "description": "Other Services-Architectural & Engineering Services"
     },
     {
-        "material_number": "E045",
-        "description": "Other Services-Architectural & Engineering Services"
-    },
-    {
-        "material_number": "E047",
-        "description": "Other Services-Architectural & Engineering Services"
-    },
-    {
-        "material_number": "E046",
-        "description": "Other Services-Architectural & Engineering Services"
-    },
-    {
-        "material_number": "E043",
+        "material_number": "218999",
         "description": "Other Services(OOE only)"
     },
     {
-        "material_number": "E045",
-        "description": "Other Services(OOE only)"
-    },
-    {
-        "material_number": "E047",
-        "description": "Other Services(OOE only)"
-    },
-    {
-        "material_number": "E046",
-        "description": "Other Services(OOE only)"
-    },
-    {
-        "material_number": "E048",
+        "material_number": "221101",
         "description": "Maintenance-Building(OOE only)"
     },
     {
-        "material_number": "E049",
+        "material_number": "221201",
         "description": "Maintenance-Mechanical & Electrical System of Building(OOE only)"
     },
     {
-        "material_number": "E050",
+        "material_number": "221301",
         "description": "Maintenance-Cleaning, Horticultural Landscaping & Pest Control of Building(OOE only)"
     },
     {
-        "material_number": "E063",
+        "material_number": "221401",
+        "description": "Cyclical Replacement-Building(OOE only)"
+    },
+    {
+        "material_number": "221501",
+        "description": "Cyclical Replacement-Mechanical & Electrical System of Building(OOE only)"
+    },
+    {
+        "material_number": "221601",
+        "description": "Maintenance-Land(OOE only)"
+    },
+    {
+        "material_number": "222101",
+        "description": "Maintenance-Public Roads/Car Parks(OOE only)"
+    },
+    {
+        "material_number": "222201",
+        "description": "Maintenance-Bridges/Underpasses(OOE only)"
+    },
+    {
+        "material_number": "222301",
+        "description": "Maintenance-Sidewalks(OOE only)"
+    },
+    {
+        "material_number": "222401",
+        "description": "Maintenance-Lighting Systems(OOE only)"
+    },
+    {
+        "material_number": "222501",
+        "description": "Maintenance-Monuments(OOE only)"
+    },
+    {
+        "material_number": "222601",
+        "description": "Maintenance-Public Parks(OOE only)"
+    },
+    {
+        "material_number": "222701",
+        "description": "Maintenance-Drainage & Sewerage Systems(OOE only)"
+    },
+    {
+        "material_number": "223101",
+        "description": "Maintenance-Wharves/Port Facilities(OOE only)"
+    },
+    {
+        "material_number": "223201",
+        "description": "Maintenance-Land Transport Facilities(OOE only)"
+    },
+    {
+        "material_number": "223401",
         "description": "Maintenance-Motor Vehicles(OOE only)"
     },
     {
-        "material_number": "E064",
+        "material_number": "223601",
         "description": "Maintenance-Vessels(OOE only)"
     },
     {
-        "material_number": "E066",
+        "material_number": "223701",
+        "description": "Maintenance-Aircrafts(OOE only)"
+    },
+    {
+        "material_number": "223801",
         "description": "Maintenance-Unmanned Aerial Vehicles(OOE only)"
     },
     {
-        "material_number": "E071",
+        "material_number": "224101",
+        "description": "Maintenance-Incineration Plants(OOE only)"
+    },
+    {
+        "material_number": "224201",
+        "description": "Maintenance-Water Treatment Plants & Equipment(OOE only)"
+    },
+    {
+        "material_number": "224401",
+        "description": "Maintenance-Heavy Construction Machinery(OOE only)"
+    },
+    {
+        "material_number": "225101",
+        "description": "Maintenance-Furniture & Fittings(OOE only)"
+    },
+    {
+        "material_number": "225201",
         "description": "Maintenance-Office Equipment(OOE only)"
     },
     {
-        "material_number": "E073",
+        "material_number": "225301",
+        "description": "Maintenance-Scientific Equipment(OOE only)"
+    },
+    {
+        "material_number": "225901",
         "description": "Maintenance-Other Equipment & Tools(OOE only)"
     },
     {
-        "material_number": "E074",
+        "material_number": "226101",
         "description": "Maintenance-ICT Hardware(OOE only)"
     },
     {
-        "material_number": "E075",
+        "material_number": "226201",
         "description": "Maintenance-ICT Software(OOE only)"
     },
     {
-        "material_number": "E076",
+        "material_number": "226301",
         "description": "Maintenance-ICT Hardware Integrated with Software(OOE only)"
     },
     {
-        "material_number": "E082",
+        "material_number": "226401",
+        "description": "Maintenance-Operations Technology Systems(OOE only)"
+    },
+    {
+        "material_number": "226501",
+        "description": "Maintenance-Other Operations Technology Systems(OOE only)"
+    },
+    {
+        "material_number": "227101",
+        "description": "Maintenance-Intangible Assets(OOE only)"
+    },
+    {
+        "material_number": "227201",
+        "description": "Maintenance-Investment Property(OOE only)"
+    },
+    {
+        "material_number": "227901",
+        "description": "Maintenance-Other Assets(OOE only)"
+    },
+    {
+        "material_number": "231101",
         "description": "Staff Training(OOE only)"
     },
     {
-        "material_number": "E085",
+        "material_number": "231201",
+        "description": "Staff Scholarship(OOE only)"
+    },
+    {
+        "material_number": "231301",
+        "description": "Memberships(OOE only)"
+    },
+    {
+        "material_number": "231401",
         "description": "Staff Well-Being(OOE only)"
     },
     {
-        "material_number": "E088",
+        "material_number": "231701",
+        "description": "Staff Awards(OOE only)"
+    },
+    {
+        "material_number": "241201",
+        "description": "Other Entertainment(OOE only)"
+    },
+    {
+        "material_number": "242101",
         "description": "Marketing & Advertising(OOE only)"
     },
     {
-        "material_number": "E091",
+        "material_number": "271101",
+        "description": "Fixed Asset Purchase-Building (Project)"
+    },
+    {
+        "material_number": "271201",
+        "description": "Fixed Asset Purchase-Building Improvement (Project)"
+    },
+    {
+        "material_number": "271301",
         "description": "Fixed Asset Purchase-Mechanical & Electrical System of Building (Project)"
     },
     {
-        "material_number": "E103",
+        "material_number": "271401",
+        "description": "Fixed Asset Purchase-Land (Project)"
+    },
+    {
+        "material_number": "272101",
+        "description": "Fixed Asset Purchase-Public Roads/Car Parks (Project)"
+    },
+    {
+        "material_number": "272201",
+        "description": "Fixed Asset Purchase-Bridges/Underpasses (Project)"
+    },
+    {
+        "material_number": "272301",
+        "description": "Fixed Asset Purchase-Sidewalks (Project)"
+    },
+    {
+        "material_number": "272401",
+        "description": "Fixed Asset Purchase-Lighting Systems (Project)"
+    },
+    {
+        "material_number": "272501",
+        "description": "Fixed Asset Purchase-Monuments (Project)"
+    },
+    {
+        "material_number": "272601",
+        "description": "Fixed Asset Purchase-Public Parks (Project)"
+    },
+    {
+        "material_number": "272701",
+        "description": "Fixed Asset Purchase-Drainage & Sewerage System (Project)"
+    },
+    {
+        "material_number": "273101",
+        "description": "Fixed Asset Purchase-Wharves/Port Facilities (Project)"
+    },
+    {
+        "material_number": "273201",
+        "description": "Fixed Asset Purchase-Land Transport Facilities (Project)"
+    },
+    {
+        "material_number": "273401",
+        "description": "Fixed Asset Purchase-Motor Vehicles (Project)"
+    },
+    {
+        "material_number": "273601",
         "description": "Fixed Asset Purchase-Vessels (Project)"
     },
     {
-        "material_number": "E111",
+        "material_number": "273701",
+        "description": "Fixed Asset Purchase-Aircrafts (Project)"
+    },
+    {
+        "material_number": "273801",
+        "description": "Fixed Asset Purchase-Unmanned Aerial Vehicles (Project)"
+    },
+    {
+        "material_number": "274101",
+        "description": "Fixed Asset Purchase-Incineration Plants (Project)"
+    },
+    {
+        "material_number": "274201",
+        "description": "Fixed Asset Purchase-Water Treatment Plants & Equipment (Project)"
+    },
+    {
+        "material_number": "274401",
+        "description": "Fixed Asset Purchase-Heavy Construction Machinery (Project)"
+    },
+    {
+        "material_number": "275101",
+        "description": "Fixed Asset Purchase-Furniture & Fittings (Project)"
+    },
+    {
+        "material_number": "275201",
+        "description": "Fixed Asset Purchase-Office Equipment (Projcet)"
+    },
+    {
+        "material_number": "275301",
         "description": "Fixed Asset Purchase-Scientific Equipment (Project)"
     },
     {
-        "material_number": "E113",
+        "material_number": "275901",
+        "description": "Fixed Asset Purchase-Other Equipment & Tools (Project)"
+    },
+    {
+        "material_number": "276101",
         "description": "Fixed Asset Purchase-ICT Hardware (Project)"
     },
     {
-        "material_number": "E114",
+        "material_number": "276201",
         "description": "Fixed Asset Purchase-ICT Software (Project)"
     },
     {
-        "material_number": "E115",
+        "material_number": "276301",
         "description": "Fixed Asset Purchase-ICT Hardware Integrated with Software (Project)"
     },
     {
-        "material_number": "E120",
+        "material_number": "276401",
+        "description": "Fixed Asset Purchase-Operations Technology Systems - Science & Technology (Project)"
+    },
+    {
+        "material_number": "276501",
+        "description": "Fixed Asset Purchase-Other Ops Tech Sys (Project)"
+    },
+    {
+        "material_number": "277101",
+        "description": "Fixed Asset Purchase-Intangible Assets (Project)"
+    },
+    {
+        "material_number": "277201",
+        "description": "Fixed Asset Purchase-Investment Property (Project)"
+    },
+    {
+        "material_number": "277901",
         "description": "Fixed Asset Purchase-Other Assets (Project)"
     },
     {
-        "material_number": "E121",
+        "material_number": "281201",
         "description": "Insurance(OOE only)"
     },
     {
-        "material_number": "E123",
+        "material_number": "283501",
+        "description": "Road Tax"
+    },
+    {
+        "material_number": "352199",
         "description": "SPS only - Other Social & Community Transfers (OOE only)"
     },
     {
-        "material_number": "E124",
+        "material_number": "965602",
         "description": "SPS only - Miscellaneous Deposit  (OOE only)"
     }
 ]
