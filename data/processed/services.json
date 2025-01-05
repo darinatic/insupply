@@ -13,7 +13,10 @@
     },
     {
         "material_number": "212401",
-        "description": "Rental-Other Equipment"
+        "description": [
+            "Rental-Other Equipment",
+            "PROVISION OF LOGISTICS"
+        ]
     },
     {
         "material_number": "212501",
