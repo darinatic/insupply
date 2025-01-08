@@ -1,6 +1,6 @@
 import numpy as np
 import json
-from openai import OpenAI
+#from openai import OpenAI
 import torch
 from scipy.spatial.distance import cdist
 from sentence_transformers import SentenceTransformer
@@ -64,6 +64,52 @@ class SentenceTransformerSearch(BaseSemanticSearch):
     def _generate_query_embeddings(self, queries):
         """Generate embeddings for queries using SentenceTransformer."""
         return self.model.encode(queries)
+
+def evaluate_model(search_engine, test_data, top_k=5):
+    """
+    Evaluate a semantic search model on test data.
+    
+    Parameters:
+        search_engine (BaseSemanticSearch): The semantic search model object.
+        test_data (pd.DataFrame): DataFrame containing the test data.
+        top_k (int): Number of top results to retrieve for each query.
+
+    Returns:
+        List[Dict]: A list of results containing evaluation details for each query.
+    """
+    results = []
+
+    # Iterate through the test data
+    for _, row in test_data.iterrows():
+        query = row["Combined Description"]  
+        expected_material_number = row["material_number"]  
+        expected_description = row["description"]  
+
+        # Retrieve the top matches using the search engine
+        search_results = json.loads(search_engine.search([query], top_k=top_k))
+        top_matches = search_results[0]["matches"]
+
+        # Extract material numbers and similarity scores from the top matches
+        retrieved_material_numbers = [match["material_number"] for match in top_matches]
+        similarity_scores = [match["score"] for match in top_matches]
+
+        # Check if the expected material number is in the top retrieved results
+        is_correct = expected_material_number in retrieved_material_numbers
+
+        # Append detailed results for this query
+        results.append({
+            "query": query,
+            "expected": expected_material_number,
+            "expected_description": expected_description,
+            "retrieved_top_5": top_matches,  
+            "retrieved_material_numbers": retrieved_material_numbers,
+            "similarity_scores": similarity_scores,
+            "is_correct": is_correct
+        })
+
+    return results
+
+
 
 class BERTSearch(BaseSemanticSearch):
     def __init__(self, data_file, model_name='bert-base-uncased'):
@@ -159,46 +205,3 @@ class OpenAISearch(BaseSemanticSearch):
         query_embeddings = [data['embedding'] for data in response['data']]
         return np.array(query_embeddings)
 
-def evaluate_model(search_engine, test_data, top_k=5):
-    """
-    Evaluate a semantic search model on test data.
-    
-    Parameters:
-        search_engine (BaseSemanticSearch): The semantic search model object.
-        test_data (pd.DataFrame): DataFrame containing the test data.
-        top_k (int): Number of top results to retrieve for each query.
-
-    Returns:
-        List[Dict]: A list of results containing evaluation details for each query.
-    """
-    results = []
-
-    # Iterate through the test data
-    for _, row in test_data.iterrows():
-        query = row["Combined Description"]  
-        expected_material_number = row["material_number"]  
-        expected_description = row["description"]  
-
-        # Retrieve the top matches using the search engine
-        search_results = json.loads(search_engine.search([query], top_k=top_k))
-        top_matches = search_results[0]["matches"]
-
-        # Extract material numbers and similarity scores from the top matches
-        retrieved_material_numbers = [match["material_number"] for match in top_matches]
-        similarity_scores = [match["score"] for match in top_matches]
-
-        # Check if the expected material number is in the top retrieved results
-        is_correct = expected_material_number in retrieved_material_numbers
-
-        # Append detailed results for this query
-        results.append({
-            "query": query,
-            "expected": expected_material_number,
-            "expected_description": expected_description,
-            "retrieved_top_5": top_matches,  
-            "retrieved_material_numbers": retrieved_material_numbers,
-            "similarity_scores": similarity_scores,
-            "is_correct": is_correct
-        })
-
-    return results

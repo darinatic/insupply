@@ -1,0 +1,8 @@
+pandas
+openpyxl
+xlrd
+numpy
+scipy
+scikit-learn
+matplotlib
+sentence-transformers
