@@ -38,7 +38,10 @@
     },
     {
         "material_number": "213101",
-        "description": "Service for Office Supplies(OOE only)"
+        "description": [
+            "Service for Office Supplies(OOE only)",
+            "Leasing of Digital Copiers"
+        ]
     },
     {
         "material_number": "213201",
@@ -93,7 +96,10 @@
     },
     {
         "material_number": "215201",
-        "description": "Travel & Transport-Local(OOE only)"
+        "description": [
+            "Travel & Transport-Local(OOE only)",
+            "Provision of Hiring Services for Cars, Buses and Vans"
+        ]
     },
     {
         "material_number": "216101",
@@ -141,7 +147,10 @@
     },
     {
         "material_number": "217501",
-        "description": "Tech Services-ICT Security/Audit Services"
+        "description": [
+            "Tech Services-ICT Security/Audit Services",
+            "PROVISION OF A BULK TENDER ON CYBERSECURITY AND AUDIT SERVICES"
+        ]
     },
     {
         "material_number": "217601",
@@ -149,7 +158,10 @@
     },
     {
         "material_number": "217901",
-        "description": "Tech Services-Other ICT Services"
+        "description": [
+            "Tech Services-Other ICT Services",
+            "FRAMEWORK AGREEMENT FOR THE PROVISION OF INFOCOMM TECHNOLOGY, ENGINEERING"
+        ]
     },
     {
         "material_number": "218101",
@@ -311,7 +323,10 @@
     },
     {
         "material_number": "225901",
-        "description": "Maintenance-Other Equipment & Tools(OOE only)"
+        "description": [
+            "Maintenance-Other Equipment & Tools(OOE only)",
+            "SUPPLY AND MAINTENANCE OF FIRE FIGHTING EQUIPMENT"
+        ]
     },
     {
         "material_number": "226101",
@@ -347,7 +362,10 @@
     },
     {
         "material_number": "231101",
-        "description": "Staff Training(OOE only)"
+        "description": [
+            "Staff Training(OOE only)",
+            "Security Training and Awareness"
+        ]
     },
     {
         "material_number": "231201",
