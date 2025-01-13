@@ -1,0 +1,427 @@
+[
+    {
+        "query": "LOGISTICS SERVICES FOR HOME TEAM RETAIL MEGAMART",
+        "expected": "212401",
+        "expected_description": "Rental-Other Equipment",
+        "retrieved_top_5": [
+            {
+                "material_number": "212401",
+                "description": [
+                    "Rental-Other Equipment",
+                    "PROVISION OF LOGISTICS SERVICES"
+                ],
+                "score": 51.48
+            },
+            {
+                "material_number": "213902",
+                "description": "Service for Industrial Supplies(OOE only)",
+                "score": 42.69
+            },
+            {
+                "material_number": "213904",
+                "description": "Service for Other Supplies(OOE only)",
+                "score": 41.49
+            },
+            {
+                "material_number": "218999",
+                "description": "Other Services-Manpower from Suppliers",
+                "score": 40.76
+            },
+            {
+                "material_number": "213401",
+                "description": "Service for Uniform Supplies(OOE only)",
+                "score": 40.56
+            }
+        ],
+        "retrieved_material_numbers": [
+            "212401",
+            "213902",
+            "213904",
+            "218999",
+            "213401"
+        ],
+        "similarity_scores": [
+            51.48,
+            42.69,
+            41.49,
+            40.76,
+            40.56
+        ],
+        "is_correct": true
+    },
+    {
+        "query": "Video and Animation Period Contract and Framework Agreement",
+        "expected": "218999",
+        "expected_description": "Other Services(OOE only)",
+        "retrieved_top_5": [
+            {
+                "material_number": "218999",
+                "description": [
+                    "Other Services-Other Services",
+                    "WOG Video and Animation Period Contract",
+                    "WOG Translation and Related Services",
+                    "WOG Research Services and Period Contract",
+                    "WOG PERIOD CONTRACT AND FRAMEWORK AGREEMENT"
+                ],
+                "score": 68.74
+            },
+            {
+                "material_number": "276101",
+                "description": "Fixed Asset Purchase-ICT Hardware (Project)",
+                "score": 31.91
+            },
+            {
+                "material_number": "276201",
+                "description": "Fixed Asset Purchase-ICT Software (Project)",
+                "score": 30.42
+            },
+            {
+                "material_number": "277901",
+                "description": "Fixed Asset Purchase-Other Assets (Project)",
+                "score": 29.12
+            },
+            {
+                "material_number": "271401",
+                "description": "Fixed Asset Purchase-Land (Project)",
+                "score": 28.91
+            }
+        ],
+        "retrieved_material_numbers": [
+            "218999",
+            "276101",
+            "276201",
+            "277901",
+            "271401"
+        ],
+        "similarity_scores": [
+            68.74,
+            31.91,
+            30.42,
+            29.12,
+            28.91
+        ],
+        "is_correct": true
+    },
+    {
+        "query": "PROVISION OF CATERING SERVICES food items",
+        "expected": "212901",
+        "expected_description": "Rental-Other Assets",
+        "retrieved_top_5": [
+            {
+                "material_number": "213201",
+                "description": [
+                    "Service for Meals & Refreshments(OOE only)",
+                    "PROVISION OF CATERING SERVICES food items"
+                ],
+                "score": 86.18
+            },
+            {
+                "material_number": "212901",
+                "description": [
+                    "Rental-Other Assets",
+                    "PROVISION OF CATERING SERVICES non-food items",
+                    "Provision of Security Services Package",
+                    "PROVISION OF CARDIAC HEALTH SCREENING SERVICES",
+                    "Video Wall Systems Schedule of Rates"
+                ],
+                "score": 77.79
+            },
+            {
+                "material_number": "213904",
+                "description": "Service for Other Supplies(OOE only)",
+                "score": 45.71
+            },
+            {
+                "material_number": "212401",
+                "description": [
+                    "Rental-Other Equipment",
+                    "PROVISION OF LOGISTICS SERVICES"
+                ],
+                "score": 44.44
+            },
+            {
+                "material_number": "218401",
+                "description": [
+                    "Other Services-Postage and Courier Services",
+                    "PROVISION OF COURIER SERVICES",
+                    "Provision of Direct Mailing Services"
+                ],
+                "score": 40.67
+            }
+        ],
+        "retrieved_material_numbers": [
+            "213201",
+            "212901",
+            "213904",
+            "212401",
+            "218401"
+        ],
+        "similarity_scores": [
+            86.18,
+            77.79,
+            45.71,
+            44.44,
+            40.67
+        ],
+        "is_correct": true
+    },
+    {
+        "query": "SERVICES FOR HOME TEAM RETAIL MEGAMART (HTRM)   WATCH TOWER 8FT X 12FT X 10FT(H)(2 DAYS)",
+        "expected": "212401",
+        "expected_description": "Rental-Other Equipment",
+        "retrieved_top_5": [
+            {
+                "material_number": "218999",
+                "description": [
+                    "Other Services-Other Services",
+                    "WOG Video and Animation Period Contract",
+                    "WOG Translation and Related Services",
+                    "WOG Research Services and Period Contract",
+                    "WOG PERIOD CONTRACT AND FRAMEWORK AGREEMENT"
+                ],
+                "score": 35.71
+            },
+            {
+                "material_number": "212301",
+                "description": "Rental-Office Equipment",
+                "score": 34.13
+            },
+            {
+                "material_number": "212501",
+                "description": "Rental-ICT Hardware",
+                "score": 31.67
+            },
+            {
+                "material_number": "212401",
+                "description": [
+                    "Rental-Other Equipment",
+                    "PROVISION OF LOGISTICS SERVICES"
+                ],
+                "score": 31.21
+            },
+            {
+                "material_number": "225201",
+                "description": "Maintenance-Office Equipment(OOE only)",
+                "score": 29.45
+            }
+        ],
+        "retrieved_material_numbers": [
+            "218999",
+            "212301",
+            "212501",
+            "212401",
+            "225201"
+        ],
+        "similarity_scores": [
+            35.71,
+            34.13,
+            31.67,
+            31.21,
+            29.45
+        ],
+        "is_correct": true
+    },
+    {
+        "query": "Video and Animation Period Contract and Framework Agreement - 4th Edition    A34 - Third Party Management Cost",
+        "expected": "218999",
+        "expected_description": "Other Services(OOE only)",
+        "retrieved_top_5": [
+            {
+                "material_number": "218999",
+                "description": [
+                    "Other Services-Other Services",
+                    "WOG Video and Animation Period Contract",
+                    "WOG Translation and Related Services",
+                    "WOG Research Services and Period Contract",
+                    "WOG PERIOD CONTRACT AND FRAMEWORK AGREEMENT"
+                ],
+                "score": 62.88
+            },
+            {
+                "material_number": "276101",
+                "description": "Fixed Asset Purchase-ICT Hardware (Project)",
+                "score": 37.64
+            },
+            {
+                "material_number": "276201",
+                "description": "Fixed Asset Purchase-ICT Software (Project)",
+                "score": 36.22
+            },
+            {
+                "material_number": "217901",
+                "description": [
+                    "Tech Services-Other ICT Services",
+                    "FRAMEWORK AGREEMENT FOR THE PROVISION OF INFOCOMM TECHNOLOGY, ENGINEERING"
+                ],
+                "score": 32.32
+            },
+            {
+                "material_number": "218201",
+                "description": "Other Services-Agency Fees & Commissions",
+                "score": 32.19
+            }
+        ],
+        "retrieved_material_numbers": [
+            "218999",
+            "276101",
+            "276201",
+            "217901",
+            "218201"
+        ],
+        "similarity_scores": [
+            62.88,
+            37.64,
+            36.22,
+            32.32,
+            32.19
+        ],
+        "is_correct": true
+    },
+    {
+        "query": "CALL CENTRE SYSTEM WITH MAINTENANCE FOR TP",
+        "expected": "226301",
+        "expected_description": "Maintenance-ICT Hardware Integrated with Software(OOE only)",
+        "retrieved_top_5": [
+            {
+                "material_number": "226401",
+                "description": "Maintenance-Operations Technology Systems(OOE only)",
+                "score": 53.37
+            },
+            {
+                "material_number": "226201",
+                "description": "Maintenance-ICT Software(OOE only)",
+                "score": 50.64
+            },
+            {
+                "material_number": "226101",
+                "description": "Maintenance-ICT Hardware(OOE only)",
+                "score": 48.48
+            },
+            {
+                "material_number": "221101",
+                "description": "Maintenance-Building(OOE only)",
+                "score": 46.4
+            },
+            {
+                "material_number": "225201",
+                "description": "Maintenance-Office Equipment(OOE only)",
+                "score": 45.03
+            }
+        ],
+        "retrieved_material_numbers": [
+            "226401",
+            "226201",
+            "226101",
+            "221101",
+            "225201"
+        ],
+        "similarity_scores": [
+            53.37,
+            50.64,
+            48.48,
+            46.4,
+            45.03
+        ],
+        "is_correct": false
+    },
+    {
+        "query": "LOGISTICS SERVICES FOR HOME TEAM RETAIL MEGAMART",
+        "expected": "218999",
+        "expected_description": "Other Services(OOE only)",
+        "retrieved_top_5": [
+            {
+                "material_number": "212401",
+                "description": [
+                    "Rental-Other Equipment",
+                    "PROVISION OF LOGISTICS SERVICES"
+                ],
+                "score": 51.48
+            },
+            {
+                "material_number": "213902",
+                "description": "Service for Industrial Supplies(OOE only)",
+                "score": 42.69
+            },
+            {
+                "material_number": "213904",
+                "description": "Service for Other Supplies(OOE only)",
+                "score": 41.49
+            },
+            {
+                "material_number": "218999",
+                "description": "Other Services-Manpower from Suppliers",
+                "score": 40.76
+            },
+            {
+                "material_number": "213401",
+                "description": "Service for Uniform Supplies(OOE only)",
+                "score": 40.56
+            }
+        ],
+        "retrieved_material_numbers": [
+            "212401",
+            "213902",
+            "213904",
+            "218999",
+            "213401"
+        ],
+        "similarity_scores": [
+            51.48,
+            42.69,
+            41.49,
+            40.76,
+            40.56
+        ],
+        "is_correct": true
+    },
+    {
+        "query": "LOGISTICS SERVICES FOR HOME TEAM RETAIL MEGAMART (HTRM) OPS LOG   SPECTATOR STAND  8 FT X 8 FT (> 10 DAYS)",
+        "expected": "212401",
+        "expected_description": "Rental-Other Equipment",
+        "retrieved_top_5": [
+            {
+                "material_number": "212401",
+                "description": [
+                    "Rental-Other Equipment",
+                    "PROVISION OF LOGISTICS SERVICES"
+                ],
+                "score": 50.32
+            },
+            {
+                "material_number": "213902",
+                "description": "Service for Industrial Supplies(OOE only)",
+                "score": 40.02
+            },
+            {
+                "material_number": "213401",
+                "description": "Service for Uniform Supplies(OOE only)",
+                "score": 39.91
+            },
+            {
+                "material_number": "213904",
+                "description": "Service for Other Supplies(OOE only)",
+                "score": 39.39
+            },
+            {
+                "material_number": "225201",
+                "description": "Maintenance-Office Equipment(OOE only)",
+                "score": 37.88
+            }
+        ],
+        "retrieved_material_numbers": [
+            "212401",
+            "213902",
+            "213401",
+            "213904",
+            "225201"
+        ],
+        "similarity_scores": [
+            50.32,
+            40.02,
+            39.91,
+            39.39,
+            37.88
+        ],
+        "is_correct": true
+    }
+]
