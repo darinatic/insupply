@@ -30,7 +30,7 @@
         "material_number": "212901",
         "description": [
             "Rental-Other Assets",
-            "PROVISION OF CATERING SERVICES non-food items",
+            "PROVISION OF CATERING SERVICES, non-food items",
             "Provision of Security Services Package",
             "PROVISION OF CARDIAC HEALTH SCREENING SERVICES",
             "Video Wall Systems Schedule of Rates"
@@ -47,7 +47,7 @@
         "material_number": "213201",
         "description": [
             "Service for Meals & Refreshments(OOE only)",
-            "PROVISION OF CATERING SERVICES food items"
+            "PROVISION OF CATERING SERVICES, food items"
         ]
     },
     {
@@ -76,7 +76,10 @@
     },
     {
         "material_number": "213904",
-        "description": "Service for Other Supplies(OOE only)"
+        "description": [
+            "Service for Other Supplies(OOE only)",
+            "PROVISION OF CATERING SERVICES, damange of item"
+        ]
     },
     {
         "material_number": "214101",
